@@ -55,4 +55,3 @@ def compare_with_torchscript_model():
 if __name__ == "__main__":
     run()
     compare_with_torchscript_model()
-    #
