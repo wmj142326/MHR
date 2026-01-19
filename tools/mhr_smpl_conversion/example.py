@@ -36,7 +36,7 @@ class DEMO:
     def __init__(self):
         self.smpl_model = None
         self.smplx_model = None
-        self._device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self._device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
         self._device = torch.device("cpu")
 
     def run_examples(
@@ -65,7 +65,7 @@ class DEMO:
                         ".npz", "_generate_from_npz.pkl"
                     )
                     if not os.path.exists(converted_smpl_model_file):
-                        smpl_model_data = dict(np.load(smpl_model_file))
+                        smpl_model_data = dict(np.load(smpl_model_file, allow_pickle=True))
                         import pickle
                         with open(converted_smpl_model_file, "wb") as f:
                             pickle.dump(smpl_model_data, f)
