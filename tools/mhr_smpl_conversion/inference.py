@@ -194,7 +194,7 @@ def main():
     # Convert MHR back to SMPLX
     for scene_file in sorted(os.listdir(scene_dir)):
         print(f"----------{scene_file}----------")
-        frame_keys, mhr_data = json_to_stacked_tensors(os.path.join(scene_dir,scene_file), device=device)
+        frame_keys, mhr_data = json_to_stacked_tensors(os.path.join(scene_dir, scene_file), device=device)
         
         smplx_results = converter.convert_mhr2smpl(
             mhr_parameters=mhr_data,

@@ -36,3 +36,8 @@ pixi.lock
 assets/
 assets.zip
 __MACOSX/
+
+# my file
+output/
+tools/mhr_smpl_conversion/tmp_results/
+
